@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projectile Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__mission">
+        <div>
+          <p>Misson Complete</p>
+          <button class="play">Play again</button>
+        </div>
+      </div>
+
+      <div class="container_canvas">
+        <canvas id="theCanvas" width="1100" height="650"> </canvas>
+        <div class="info">
+          <form>
+            <button class="enemy">Show Off The Enemy</button>
+            <p class="x"></p>
+            <div>
+              <label for="velocity">Velocity</label><br />
+              <input type="number" class="velocity" id="velocity" min="500" />
+            </div>
+            <div>
+              <label for="degree">Degree</label><br />
+              <input type="number" class="degree" id="degree"/>
+            </div>
+            <div>
+              <button class="ready">Ready</button>
+              <button class="fire">Fire</button>
+            </div>
+            <div>
+              <button class="reset">Reset</button>
+            </div>
+          </form>
+          <div>
+            <p class="timer">Time</p>
+            <p class="h-d">Horizintal</p>
+            <p class="v-d">Vertical</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
