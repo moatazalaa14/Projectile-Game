@@ -1,4 +1,5 @@
-# Projectile-Game
+
+
 
 ## Brief
 My challenge is to build out this Projectile Game 
@@ -24,3 +25,9 @@ users should be able to:
 1. click on ```Show off The Enemy``` it will display the enemy as point and the distance from the gun.
 2. determine ```Velocity``` and ```Degree``` then click on ready(it will display the gun with the required angle)
 3. click on ```Fire``` to try to hit the enemy
+
+
+## Video for Project
+
+# 
+https://user-images.githubusercontent.com/52619217/118148784-31548b00-b411-11eb-83c9-4b5e89a4d11d.mp4
