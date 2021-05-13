@@ -1,6 +1,6 @@
 # Projectile-Game
 
-##Brief
+## Brief
 My challenge is to build out this Projectile Game 
 
 
@@ -16,7 +16,7 @@ users should be able to:
 - Display feedback for user if he hit the enemy successfully 
 - Reset all data to play again
 
-##Getting started
+## Getting started
 
 1. click on ```Show off The Enemy``` it will display for you horizontal distance
 2. determine ```Velocity``` and ```Degree``` then clock on ready(it will display the tank)
