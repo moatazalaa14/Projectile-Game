@@ -101,9 +101,14 @@ function isCompelete() {
   if (Math.abs(x - target.x) <= 50) {
     console.log("done");
     document.querySelector(".container__mission").style.display = "flex";
+    document.querySelector(".container__mission_status p").innerHTML="Mission Complete"
+    document.querySelector(".container__mission_status").style.backgroundColor = "#4aa96c";
+
+
   } else {
-    console.log("is not");
-    console.log(x);
+    document.querySelector(".container__mission").style.display = "flex";
+    document.querySelector(".container__mission_status").style.backgroundColor = "#fb3640";
+    document.querySelector(".container__mission_status p").innerHTML="Mission Failed"
   }
 }
 //whaen click on fire button to fire the projectile
