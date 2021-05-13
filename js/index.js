@@ -6,10 +6,7 @@ let $v = document.querySelector(".velocity"),
 var theCanvas = document.getElementById("theCanvas");
 var theContext = theCanvas.getContext("2d");
 var grd = theContext.createLinearGradient(0,0,0,400);
-grd.addColorStop(0," #68bde1");
-grd.addColorStop(1,"#f5c16c");
-theContext.fillStyle = grd;
-theContext.fillRect(0,0,1100,650);
+
 
 //determine the start point
 var x = 0;
@@ -22,12 +19,25 @@ function sinDegrees(angleDegrees) {
 function cosDegrees(angleDegrees) {
   return Math.cos((angleDegrees * Math.PI) / 180);
 }
+//add gradient background
+
+function changeGradientBackground(){
+  grd.addColorStop(0," #68bde1");
+  grd.addColorStop(1,"#f5c16c");
+  theContext.fillStyle = grd;
+  theContext.fillRect(0,0,1100,650);
+}
+
+
+changeGradientBackground()
+
 
 //target is the place of enemy
 let target = {
   x,
   y,
 };
+
 
 //it is a random point that enempy place on it
 function drawRandom() {
@@ -129,6 +139,7 @@ document.querySelector(".reset").addEventListener("click", (event) => {
   t = 0;
   document.querySelector(".timer").innerHTML = "Time";
   document.querySelector(".enemy").disabled = false;
+  changeGradientBackground()
 });
 //guide the tank with the right angle
 document.querySelector(".ready").addEventListener("click", (event) => {
