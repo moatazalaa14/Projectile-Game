@@ -5,6 +5,11 @@ let $v = document.querySelector(".velocity"),
 //Start with canvas
 var theCanvas = document.getElementById("theCanvas");
 var theContext = theCanvas.getContext("2d");
+var grd = theContext.createLinearGradient(0,0,0,400);
+grd.addColorStop(0," #68bde1");
+grd.addColorStop(1,"#f5c16c");
+theContext.fillStyle = grd;
+theContext.fillRect(0,0,1100,650);
 
 //determine the start point
 var x = 0;
@@ -30,7 +35,7 @@ function drawRandom() {
   target.x = Math.floor(Math.random() * (1000 - 500)) + 500;
   target.y = 640;
   theContext.arc(target.x, target.y, 5, 0, 2 * Math.PI);
-  theContext.fillStyle = "#e94560";
+  theContext.fillStyle = "black";
   theContext.fill();
 }
 
@@ -42,8 +47,8 @@ function drawTank() {
     50 * cosDegrees($degree.value),
     650 - 50 * sinDegrees($degree.value)
   );
-  theContext.lineWidth = 15;
-  theContext.strokeStyle = "#fcdab7";
+  theContext.lineWidth = 20;
+  theContext.strokeStyle = "#00541a";
   theContext.stroke();
 }
 
@@ -51,7 +56,7 @@ function drawTank() {
 function drawProjectile() {
   theContext.beginPath();
   theContext.arc(x, y, 5, 0, 2 * Math.PI);
-  theContext.fillStyle = "#e94560";
+  theContext.fillStyle = "#838383";
   theContext.fill();
 }
 //intialize time which projectile take it to arrive the target point
@@ -85,7 +90,7 @@ function moveProjectile() {
 function isCompelete() {
   if (Math.abs(x - target.x) <= 50) {
     console.log("done");
-    document.querySelector(".mission").style.display = "flex";
+    document.querySelector(".container__mission").style.display = "flex";
   } else {
     console.log("is not");
     console.log(x);
@@ -133,7 +138,7 @@ document.querySelector(".ready").addEventListener("click", (event) => {
 });
 //to play again if you finished the mission
 document.querySelector(".play").addEventListener("click", () => {
-  document.querySelector(".mission").style.display = "none";
+  document.querySelector(".container__mission").style.display = "none";
 });
 //Show the place of enemy 
 document.querySelector(".enemy").addEventListener("click", (event) => {
